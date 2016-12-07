@@ -1,0 +1,14 @@
+<a href="{{path}}" class="link-frame">
+  <div id="photos">
+    {{#each users}}
+      {{#if @first}}
+        <img class="photo active" src="{{this}}">
+      {{else}}
+        <img class="photo" src="{{this}}">
+      {{/if}}
+    {{/each}}
+  </div>
+
+  <p class="title">{{title}}</p>
+  <p class="author">by {{author}}</p>
+</a>
