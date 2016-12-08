@@ -12,7 +12,7 @@ function makeSlideshow(slides) {
 
 function hoverStart(event) {
     var nextSlide = makeSlideshow(event.currentTarget.getElementsByClassName('photo'));
-    nextslide();
+    nextSlide();
     slideshow = setInterval(nextSlide, 2000);
 }
 
