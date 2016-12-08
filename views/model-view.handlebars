@@ -1,0 +1,40 @@
+{{> header}}
+  
+<main>
+  <h2>{{title}}</h2>
+  <h3>by {{author}}</h3>
+
+  <div id="description">
+    <p>{{description}}</p>
+  </div>
+
+  <div id="photo-display">
+    <div class="photo-big">
+      {{#each photos}}
+        {{#if @first}}
+          <img class="photo active" src="{{this}}">
+        {{else}}
+          <img class="photo" src="{{this}}">
+        {{/if}}
+      {{/each}}
+    </div>
+    <div id="thumbnails-container">
+      {{#each photos}}
+        {{#if @first}}
+          <img class="thumbnail selected" src="{{this}}">
+        {{else}}
+            <img class="thumbnail" src="{{this}}">
+        {{/if}}
+      {{/each}}
+    </div>
+  </div>
+
+  <button type="button">Download</button>
+
+  <div id="comments">
+    {{#each comments}}
+      <p>{{this}}</p>
+    {{/each}}
+  </div>
+</main>
+

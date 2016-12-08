@@ -1,15 +1,23 @@
-.photo{
+.photo {
+        /* For fade effect */
         visibility: hidden;
 	opacity: 0;
 	z-index: 1;
         position: absolute;
-
 	transition: visibility 0s 1s, opacity 1s;
 }
-
 .active.photo{
+        /* For fade effect */
         visibility: visible;
         transition-delay: 0s;
 	opacity: 1;
 	z-index: 2;
+}
+
+
+.photo-big {
+    position: relative;
+    /* We can change sizes to fit final layout of page, just putting this in so it is functional */
+    height: 300px;
+    width: 300px;
 }
