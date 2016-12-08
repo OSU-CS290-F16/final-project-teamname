@@ -25,8 +25,17 @@ function hoverEnd(event) {
     photos[0].classList.add('active');
 }
 
+function uploadClickHandler(event) {
+    document.getElementById('modal-backdrop').classList.toggle('hidden');
+    document.getElementById('modal').classList.toggle('hidden');
+
+}
+
 var linkFrames = document.getElementsByClassName('link-frame');
 for (var i = 0; i < linkFrames.length; i++) {
     linkFrames[i].addEventListener('mouseenter', hoverStart);
     linkFrames[i].addEventListener('mouseleave', hoverEnd);
 }
+
+var uploadButton = documents.getElementById('upload-button')
+uploadButton.addEventListener('click', uploadClickHandler)
