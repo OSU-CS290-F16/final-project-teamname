@@ -1,14 +1,14 @@
 <a href="/models/{{_id}}" class="link-frame">
-  <div id="photos">
-    {{#each photos}}
-      {{#if @first}}
-        <img class="photo active" src="{{this}}">
-      {{else}}
-        <img class="photo" src="{{this}}">
-      {{/if}}
-    {{/each}}
-  </div>
+  {{#each photos}}
+    {{#if @first}}
+      <img class="photo photo-preview active" src="{{this}}">
+    {{else}}
+      <img class="photo photo-preview" src="{{this}}">
+    {{/if}}
+  {{/each}}
 
-  <p class="title">{{title}}</p>
-  <p class="author">by {{author}}</p>
+  <div class="link-info">
+    <p class="title">{{title}}</p>
+    <p class="author">by {{author}}</p>
+  </div>
 </a>

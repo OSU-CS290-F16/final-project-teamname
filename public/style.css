@@ -1,23 +1,193 @@
-.photo {
-        /* For fade effect */
-        visibility: hidden;
-	opacity: 0;
-	z-index: 1;
-        position: absolute;
-	transition: visibility 0s 1s, opacity 1s;
-}
-.active.photo{
-        /* For fade effect */
-        visibility: visible;
-        transition-delay: 0s;
-	opacity: 1;
-	z-index: 2;
+body {
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
 }
 
+.hidden {
+    visibility: hidden;
+}
+
+.photo {
+    /* For fade effect */
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1;
+    position: absolute;
+    transition: visibility 0s 1s, opacity 1s;
+}
+.active.photo {
+    /* For fade effect */
+    visibility: visible;
+    transition-delay: 0s;
+    opacity: 1;
+    z-index: 2;
+}
+
+header {
+    background-color: slategrey;
+    height: 150px;
+}
+
+h1 {
+    margin: 0px;
+    padding: 20px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
+    font-size: 48px;    
+}
+
+.link-frame {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
+    height: 300px;
+    width: 330px;
+    margin: 20px;
+    background-color: white;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    border: solid;
+    border-color: black;
+    border-width: 1px;
+    border-radius: 2px;
+}
+
+.photo-preview {
+    height: auto;
+    width: auto;
+    max-height: 250px;
+    max-width: 330px;
+}
+
+.link-info {
+    position: absolute;
+    padding: 5px;
+    bottom: 0px;
+}
+
+.title {
+    margin: 0px;
+    color: black;
+    font-size: 25px;
+}
+
+.author {
+    margin: 0px;
+    color: black;
+    opacity: .75;
+}
+
+#photo-display {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    background-color: black;
+    height: 713px;
+    width: 806px;
+    margin-right: 0px;
+}
+
+.main-photo {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 800px;
+    height: 600px;
+}
 
 .photo-big {
-    position: relative;
-    /* We can change sizes to fit final layout of page, just putting this in so it is functional */
-    height: 300px;
-    width: 300px;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    top: 50%;
+    bottom: 50%;
+    transform: translate(-50%, -50%);
+    display: table;
+    height: auto;
+    width: auto;
+    max-height: 600px;
+    max-width: 800px;
+}
+
+.thumbnail {
+    height: auto;
+    width: auto;
+    max-height: 100px;
+    max-width: 129px;
+}
+
+.selected {
+    border: solid;
+    border-color: darkslategrey;
+}
+
+#thumbnails-container {
+    position: absolute;
+    bottom: 0px;
+}
+
+#description {
+    background-color: white;
+    padding: 10px;
+    display: inline-block;
+    min-width: 300px;
+    min-height: 150px;
+    vertical-align: top;
+    margin: 40px;
+    border: none;
+    border-radius: 2px;
+    box-shadow: inset 0px 0px 5px 4px rgba(0,0,0,0.13);
+}
+
+button {
+    display: block;
+    margin: 15px;
+    padding: 7px;
+    background-color: darkslategrey;
+    color: white;
+    font-size: 16px;
+    border-radius: 6px;
+    border: none;
+}
+
+button:hover {
+    box-shadow: inset 0px 0px 5px 4px rgba(0,0,0,0.13);
+}
+
+#modal-backdrop {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: black;
+    opacity: .75;
+}
+
+#modal {
+    position: fixed;
+    display: block;
+    top: 50px;
+    left: 50%;
+    margin-left: -200px;
+    width: 400px;
+    min-height: 400px;
+    z-index: 1010;
+    background-color: white;
+    overflow: scroll;
+    padding: 25px;
+}
+
+input {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
+    display: block;
+    padding: 6px 10px;
+}
+
+input[type=text] {
+    width: 250px;
+}
+
+label {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
 }

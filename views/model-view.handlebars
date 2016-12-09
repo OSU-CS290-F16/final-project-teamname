@@ -2,17 +2,14 @@
   <h2>{{title}}</h2>
   <h3>by {{author}}</h3>
 
-  <div id="description">
-    <p>{{description}}</p>
-  </div>
 
   <div id="photo-display">
-    <div class="photo-big">
+    <div class="main-photo">
       {{#each photos}}
         {{#if @first}}
-          <img class="photo active" src="{{this}}">
+          <img class="photo photo-big active" src="{{this}}">
         {{else}}
-          <img class="photo" src="{{this}}">
+          <img class="photo photo-big" src="{{this}}">
         {{/if}}
       {{/each}}
     </div>
@@ -27,13 +24,10 @@
     </div>
   </div>
 
-  <button type="button">Download</button>
-
-  <div id="comments">
-    {{#each comments}}
-      <p>{{this}}</p>
-    {{/each}}
+  <div id="description" class="tall">
+    <p>{{description}}</p>
   </div>
+
 </main>
 
 <script src="/model-view.js">
