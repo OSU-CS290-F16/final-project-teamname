@@ -1,0 +1,28 @@
+{
+  "name": "qgreen-osu-cs290-final",
+  "version": "1.0.0",
+  "description": "Final project for CS290",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OSU-CS290-F16/final-project-teamname.git"
+  },
+  "author": "Quanah Green",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OSU-CS290-F16/final-project-teamname/issues"
+  },
+  "homepage": "https://github.com/OSU-CS290-F16/final-project-teamname#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "express-formidable": "^1.0.0",
+    "express-handlebars": "^3.0.0",
+    "fs": "0.0.1-security",
+    "mongodb": "^2.2.14",
+    "path": "^0.12.7"
+  }
+}
