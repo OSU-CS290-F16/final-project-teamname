@@ -21,14 +21,22 @@ var mongoDB;
 app.use(express.static(path.join(__dirname, 'public')));
 
 
-var upload = multer({dest: 'uploads/'});
+var upload = multer({dest: 'public/'});
 app.post('/upload', upload.fields([
             {name: 'model', maxCount: 1},
             {name: 'image', maxCount: 6},
-]), function(req, res, next) {
+]), function(req, res) {
+    var newModel = {
+        title: req.body.title,
+        author: req.body.author,
+        description: req.body.description,
+        model: req.files.model[0].path,
+        photos: req.files.image.map(function(x) {return '/' + x.filename}), // Get the path from each image
+    }
+    mongoDB.collection('models').insert(newModel);
     console.log(req.body);
     console.log(req.files);
-    res.end();
+    res.redirect('/');
 
 });
 
