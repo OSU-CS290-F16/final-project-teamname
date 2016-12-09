@@ -26,8 +26,9 @@ function hoverEnd(event) {
 }
 
 function uploadClickHandler(event) {
-    document.getElementById('modal-backdrop').classList.toggle('hidden');
-    document.getElementById('modal').classList.toggle('hidden');
+    console.log('clicked upload');
+    document.getElementById('modal-backdrop').classList.remove('hidden');
+    document.getElementById('modal').classList.remove('hidden');
 
 }
 
@@ -37,5 +38,5 @@ for (var i = 0; i < linkFrames.length; i++) {
     linkFrames[i].addEventListener('mouseleave', hoverEnd);
 }
 
-var uploadButton = documents.getElementById('upload-button')
-uploadButton.addEventListener('click', uploadClickHandler)
+var uploadButton = document.getElementById('upload-button');
+uploadButton.addEventListener('click', uploadClickHandler);
